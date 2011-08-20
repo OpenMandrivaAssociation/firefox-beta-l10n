@@ -9,7 +9,7 @@
 
 %define oname firefox-beta
 %define name %{oname}-l10n
-%define version 5.0b3
+%define version 7.0b1
 
 %if %mandriva_branch == Cooker
 # Cooker
@@ -20,7 +20,7 @@
 %define release %mkrel 0
 %endif
 
-%define xpidir http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/%{version}/linux-i686/xpi/
+%define xpidir ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/%{version}/linux-i686/xpi/
 
 # Supported l10n language lists
 %define langlist    ar af ast be bn br bs ca cs da de el en_GB eo es_ES es_AR et eu fa fi fr fy ga_IE gd gl gu_IN he hi hr hu hy id is it ja kk ko kn ku lg lt lv mai ml mr nb_NO nl nso pa_IN pl pt_PT pt_BR ro ru si sk sl sq sv_SE te tr uk vi zh_CN zh_TW zu
@@ -205,7 +205,7 @@ Source0:	%{name}-template.in
 	done\
 	)
 }
-BuildRequires:	firefox-beta-devel == %{version}
+BuildRequires:	firefox-beta-devel
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
