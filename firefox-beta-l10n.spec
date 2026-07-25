@@ -13,11 +13,11 @@
 
 %if %mandriva_branch == Cooker
 # Cooker
-%define release 0
+%define release 1
 %else
 # Old distros
 %define subrel 1
-%define release %mkrel 0
+%define release 1
 %endif
 
 %define xpidir ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/%{version}/linux-i686/xpi/
